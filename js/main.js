@@ -41,6 +41,26 @@ function getPageContainer() {
 
     return main;
 }
+function getProductCard(title, price) {
+    const item = document.createElement('li');
+    item.classList.add('product-list__item');
+
+    const productTitle = document.createElement('h2');
+    productTitle.classList.add('product-list__title');
+    productTitle.textContent = title;
+
+    const productPrice = document.createElement('strong');
+    productPrice.classList.add('product-list__price');
+    productPrice.textContent = ` ${price} usd `;
+
+    const addBasket = document.createElement('button');
+    addBasket.classList.add('btn');
+    addBasket.textContent = 'In basket';
+
+    item.append(productTitle, productPrice, addBasket);
+
+    return item;
+}
 
 //сreate  main title code
 function getMainTitle(text) {
@@ -60,7 +80,13 @@ function getMainPage() {
     const list = document.createElement('ul');
     list.classList.add('product-list', 'list-reset');
 
-    page.append(mainTitle); //add main title in page
+    list.append(
+        getProductCard('Product 1', 300),
+        getProductCard('Product 2', 500),
+        getProductCard('Product 3', 200),
+    )
+
+    page.append(mainTitle, list); //add main title in page
     return page;
 
 }
