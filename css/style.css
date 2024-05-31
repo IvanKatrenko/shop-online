@@ -92,6 +92,13 @@ header {
   font-weight: 700;
 }
 
+.description {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+
 .product-list {
   display: flex;
   flex-wrap: wrap;
