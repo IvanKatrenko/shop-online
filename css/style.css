@@ -19,4 +19,55 @@ img {
 
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: rgb(152, 151, 151);
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.btn {
+  background-color: rgb(155, 206, 246);
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  outline: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(157, 155, 155);
+  color: rgb(155, 206, 246);
+}
+
+.btn:active {
+  background-color: rgb(155, 206, 246);
+  color: rgb(0, 0, 0);
+}
+
+.btn:focus {
+  outline-color: 1px solid rgb(155, 206, 246);
+}
+
+/* header section */
+header {
+  background-color: rgb(255, 255, 255);
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+/* navigation section  */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+/* container */
+.page-container {
+  background-color: rgb(194, 184, 184);
 }

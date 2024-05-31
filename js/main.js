@@ -34,5 +34,41 @@ function getHeader() {
     return header;
 }
 
+// main section code 
+function getPageContainer() {
+    const main = document.createElement('main');
+    main.classList.add('page-container');
+
+    return main;
+}
+
+//сreate  main title code
+function getMainTitle(text) {
+    const title = document.createElement('h1');
+    title.classList.add('main-title');
+    title.textContent = text;
+    return title;
+}
+
+//home page code
+function getMainPage() {
+    const page = document.createElement('div');
+    page.classList.add('page', 'main-page', 'container');
+
+    const mainTitle = getMainTitle('Home page');
+
+    const list = document.createElement('ul');
+    list.classList.add('product-list', 'list-reset');
+
+    page.append(mainTitle); //add main title in page
+    return page;
+
+}
+
 const header = getHeader();
-app.appendChild(header) 
+const pageContainer = getPageContainer();
+
+const mainPage = getMainPage();
+pageContainer.append(mainPage);
+
+app.append(header, pageContainer) 
