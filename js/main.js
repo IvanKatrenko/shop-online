@@ -70,6 +70,14 @@ function getMainTitle(text) {
     return title;
 }
 
+// create description card code
+function getDescription(text) {
+    const description = document.createElement('p');
+    description.classList.add('description');
+    description.textContent = text;
+    return description;
+}
+
 //home page code
 function getMainPage() {
     const page = document.createElement('div');
@@ -91,10 +99,26 @@ function getMainPage() {
 
 }
 
+//second page  - product page
+function getProductPage() {
+    const page = document.createElement('div');
+    page.classList.add('page', 'main-page', 'container');
+
+    const mainTitle = getMainTitle('Product');
+    const description = getDescription('Product description');
+
+    page.append(mainTitle, description); //add productPage in page
+    return page;
+
+}
+
 const header = getHeader();
 const pageContainer = getPageContainer();
 
-const mainPage = getMainPage();
-pageContainer.append(mainPage);
+// const mainPage = getMainPage();
+// pageContainer.append(mainPage);
+
+const productPage = getProductPage();
+pageContainer.append(productPage);
 
 app.append(header, pageContainer) 
