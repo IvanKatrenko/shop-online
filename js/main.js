@@ -17,15 +17,33 @@ function getHeader() {
     link1.classList.add('btn');
     link1.textContent = 'Home page';
 
+    link1.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        navigation('main-page');
+    })
+
     let link2 = document.createElement('a');
     link2.href = '';
     link2.classList.add('btn');
     link2.textContent = 'Catalog';
 
+    link2.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        navigation('Catalog');
+    })
+
     let link3 = document.createElement('a');
     link3.href = '';
     link3.classList.add('btn');
     link3.textContent = 'Basket';
+
+    link3.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        navigation('Basket');
+    })
 
     nav.append(link1, link2, link3);
     container.append(nav);
@@ -93,6 +111,12 @@ function getMainPage() {
 
 const header = getHeader();
 const pageContainer = getPageContainer();
+
+function navigation(page) {
+    console.log(page);
+}
+
+
 
 const mainPage = getMainPage();
 pageContainer.append(mainPage);
