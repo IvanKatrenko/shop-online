@@ -91,10 +91,28 @@ function getMainPage() {
 
 }
 
+//catalog page code
+function getCatalogPage() {
+    const page = document.createElement('div');
+    page.classList.add('page', 'catalog-page', 'container');
+
+    const mainTitle = getMainTitle('Catalog');
+    const description = getDescription('Product description');
+
+    page.append(mainTitle, description); //add productPage in page
+    return page;
+
+}
+
 const header = getHeader();
 const pageContainer = getPageContainer();
 
-const mainPage = getMainPage();
+// const mainPage = getMainPage();
+// pageContainer.append(mainPage);
+
+const catalogPage = getCatalogPage();
 pageContainer.append(mainPage);
 
-app.append(header, pageContainer) 
+// app.append(header, pageContainer) 
+
+app.append(header, catalogPage) 
