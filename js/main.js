@@ -91,10 +91,27 @@ function getMainPage() {
 
 }
 
+
+//basket page code
+function getBasketPage() {
+    const page = document.createElement('div');
+    page.classList.add('page', 'basket-page', 'container');
+
+    const mainTitle = getMainTitle('Basket');
+    const description = getDescription('Product description');
+
+    page.append(mainTitle, description); //add productPage in page
+    return page;
+
+}
+
 const header = getHeader();
 const pageContainer = getPageContainer();
 
-const mainPage = getMainPage();
+// const mainPage = getMainPage();
+// pageContainer.append(mainPage);
+
+const basketPage = getBasketPage();
 pageContainer.append(mainPage);
 
 app.append(header, pageContainer) 
