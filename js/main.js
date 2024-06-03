@@ -113,12 +113,40 @@ const header = getHeader();
 const pageContainer = getPageContainer();
 
 function navigation(page) {
-    console.log(page);
+
+    pageContainer.innerHTML = '';
+
+    switch (page) {
+
+        case 'Catalog':
+            const catalogPage = getCatalogPage();
+            pageContainer.append(catalogPage);
+            break;
+        case 'Basket':
+            const basketPage = getBasketPage();
+            pageContainer.append(basketPage);
+            break;
+        default:
+            const mainPage = getMainPage();
+            pageContainer.append(mainPage);
+            break;
+
+    }
 }
 
 
+function getCatalogPage() {
+    const page = document.createElement('div');
+    page.classList.add('page', 'catalog-page', 'container');
+    return page;
+}
 
-const mainPage = getMainPage();
-pageContainer.append(mainPage);
+function getBasketPage() {
+    const page = document.createElement('div');
+    page.classList.add('page', 'basket-page', 'container');
+    return page;
+}
 
-app.append(header, pageContainer) 
+navigation('main-page');
+
+app.append(header, pageContainer)
