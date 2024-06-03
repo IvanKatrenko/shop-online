@@ -1,14 +1,9 @@
-import { getHeader } from "./components/header";
+import { getHeader, getPageContainer } from "./components/header";
 
 const app = document.getElementById('app');
 
 // main section code 
-function getPageContainer() {
-    const main = document.createElement('main');
-    main.classList.add('page-container');
 
-    return main;
-}
 function getProductCard(title, price) {
     const item = document.createElement('li');
     item.classList.add('product-list__item');
