@@ -1,5 +1,6 @@
 import { getHeader } from "./components/header";
 import { getPageContainer } from "./components/pageContainer";
+import { getMainTitle } from "./components/mainTitle";
 
 const app = document.getElementById('app');
 
@@ -31,13 +32,7 @@ function getProductCard(title, price) {
     return item;
 }
 
-//сreate  main title code
-function getMainTitle(text) {
-    const title = document.createElement('h1');
-    title.classList.add('main-title');
-    title.textContent = text;
-    return title;
-}
+
 
 //home page code
 function getMainPage() {
