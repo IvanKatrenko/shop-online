@@ -1,4 +1,5 @@
 import { getHeader } from "./components/header";
+import { getPageContainer } from "./components/pageContainer";
 
 const app = document.getElementById('app');
 
